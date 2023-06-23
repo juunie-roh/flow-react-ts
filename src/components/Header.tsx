@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 
 const Header = () => {
+
   return (
 
     <header>
@@ -19,7 +20,7 @@ const Header = () => {
       <div className="container__inner">
 
         <Nav />
-        
+
       </div>
 
     </header>
