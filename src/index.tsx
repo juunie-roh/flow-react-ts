@@ -4,13 +4,17 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import './styles/reset.css';
 import './styles/main.css';
+import MainBanner from './components/MainBanner';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Header />
+    <div className="container__page">
+      <Header />
+      <MainBanner />
+    </div>
   </React.StrictMode>
 );
 
