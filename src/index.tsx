@@ -5,6 +5,7 @@ import Header from './components/Header';
 import './styles/reset.css';
 import './styles/main.css';
 import MainBanner from './components/MainBanner';
+import Partner from './components/Partner';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,6 +15,7 @@ root.render(
     <div className="container__page">
       <Header />
       <MainBanner />
+      <Partner />
     </div>
   </React.StrictMode>
 );

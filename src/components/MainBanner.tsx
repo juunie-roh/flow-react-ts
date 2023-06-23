@@ -10,7 +10,7 @@ const MainBanner = () => {
         <div className="titleBox">
           <p>대한민국에서 가장 많이 검증된 1위</p>
           <h2>프로젝트 관리 ㅡ <br /> 협업툴 <span>플로우</span></h2>
-          <a href="">무료로 시작하기<i className='bx bx-chevron-right' style={styleArrowRight}></i></a>
+          <a href="">무료로 시작하기<i className='bx bx-chevron-right' style={ styleArrowRight }></i></a>
         </div>
 
         <div className="imageBox">
@@ -28,7 +28,7 @@ const MainBanner = () => {
       </div>
     </section>
   )
-  
+
 }
 
 export default MainBanner
