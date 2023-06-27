@@ -6,6 +6,8 @@ import './styles/reset.css';
 import './styles/main.css';
 import MainBanner from './components/MainBanner';
 import Partner from './components/Partner';
+import Footer from './components/Footer';
+import Functions from './components/Functions';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,8 +16,11 @@ root.render(
   <React.StrictMode>
     <div className="container__page">
       <Header />
+
       <MainBanner />
       <Partner />
+      <Functions />
+      <Footer />
     </div>
   </React.StrictMode>
 );
