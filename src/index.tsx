@@ -4,10 +4,11 @@ import reportWebVitals from './reportWebVitals';
 import Header from './components/Header';
 import './styles/reset.css';
 import './styles/main.css';
-import MainBanner from './components/MainBanner';
-import Partner from './components/Partner';
+import MainBanner from './components/sections/MainBanner';
+import Partner from './components/sections/Partner';
 import Footer from './components/Footer';
-import Functions from './components/Functions';
+import Functions from './components/sections/Functions';
+import Management from './components/sections/Management';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
       <MainBanner />
       <Partner />
       <Functions />
+      <Management />
       <Footer />
     </div>
   </React.StrictMode>
