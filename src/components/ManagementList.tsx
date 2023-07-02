@@ -1,5 +1,5 @@
 import React from 'react'
-import { ManagementItem } from '../../types/ManagementItem';
+import { ManagementItem } from '../types/ManagementItem';
 
 const ManagementList = ( props: { item: ManagementItem } ) => {
   const { href, title } = props.item;

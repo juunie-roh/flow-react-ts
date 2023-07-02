@@ -1,5 +1,5 @@
 import React from 'react'
-import ManagementList from './ManagementList';
+import ManagementList from '../../components/ManagementList';
 
 const managementItems = [
   {
