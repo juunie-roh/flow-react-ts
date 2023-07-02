@@ -9,6 +9,8 @@ import Partner from './components/sections/Partner';
 import Footer from './components/Footer';
 import Functions from './components/sections/Functions';
 import Management from './components/sections/Management';
+import Example from './components/sections/Example';
+import Service from './components/sections/Service';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,6 +24,9 @@ root.render(
       <Partner />
       <Functions />
       <Management />
+      <Example />
+      <Service />
+
       <Footer />
     </div>
   </React.StrictMode>
