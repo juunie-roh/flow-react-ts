@@ -11,6 +11,7 @@ import Functions from './components/sections/Functions';
 import Management from './components/sections/Management';
 import Example from './components/sections/Example';
 import Service from './components/sections/Service';
+import Guide from './components/sections/Guide';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -26,6 +27,7 @@ root.render(
       <Management />
       <Example />
       <Service />
+      <Guide />
 
       <Footer />
     </div>
