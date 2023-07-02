@@ -7,7 +7,7 @@ import './styles/main.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import { MainBanner, Partner, Functions, Management, Example, Service, Guide } from './components/sections/Sections'
+import { MainBanner, Partner, Functions, Management, Example, Service, Guide, BusinessBanner } from './components/sections/Sections'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,6 +24,7 @@ root.render(
       <Example />
       <Service />
       <Guide />
+      <BusinessBanner />
 
       <Footer />
     </div>
