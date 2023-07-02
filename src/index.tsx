@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import Header from './components/Header';
+
 import './styles/reset.css';
 import './styles/main.css';
-import MainBanner from './components/sections/MainBanner';
-import Partner from './components/sections/Partner';
+
+import Header from './components/Header';
 import Footer from './components/Footer';
-import Functions from './components/sections/Functions';
-import Management from './components/sections/Management';
-import Example from './components/sections/Example';
-import Service from './components/sections/Service';
-import Guide from './components/sections/Guide';
+import { MainBanner, Partner, Functions, Management, Example, Service, Guide } from './components/sections/Sections'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
