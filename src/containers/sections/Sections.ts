@@ -2,6 +2,7 @@ import BusinessBanner from "./BusinessBanner";
 import Example from "./Example";
 import Functions from "./Functions";
 import Guide from "./Guide";
+import Input from "./Input";
 import MainBanner from "./MainBanner";
 import Management from "./Management";
 import Partner from "./Partner";
@@ -12,6 +13,7 @@ export {
   Example,
   Functions,
   Guide,
+  Input,
   MainBanner,
   Management,
   Partner,
