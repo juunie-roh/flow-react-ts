@@ -5,30 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import './styles/reset.css';
 import './styles/main.css';
 
-import Header from './containers/header/Header';
-import Footer from './containers/footer/Footer';
-import { MainBanner, Partner, Functions, Management, Example, Service, Guide, Input, BusinessBanner } from './containers/sections/Sections'
+import App from './App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <div className="container__page">
-      <Header />
-
-      <MainBanner />
-      <Partner />
-      <Functions />
-      <Management />
-      <Example />
-      <Service />
-      <Guide />
-      <Input />
-      <BusinessBanner />
-
-      <Footer />
-    </div>
+    <App />
   </React.StrictMode>
 );
 

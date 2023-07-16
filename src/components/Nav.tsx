@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
+import * as routes from "../routes"
 
 const Nav = () => {
 
@@ -20,9 +22,9 @@ const Nav = () => {
 
     <nav id='lnbWrap'>
       <h1>
-        <a href=''>
+        <NavLink to='/'>
           <img src='/images/logo.svg' alt='flow logo image' />
-        </a>
+        </NavLink>
       </h1>
 
       <ul id="lnbMenu">
@@ -31,14 +33,14 @@ const Nav = () => {
           <span>제품<i className='bx bx-chevron-down'></i></span>
           <ul id="lnbSub">
             <li>
-              <a href="./pages/project.html">
+              <NavLink to="./pages/project.html">
                 <strong><img src="./images/header/gnb-project.png" alt="" />프로젝트 협업</strong>
                 <p>
                   프로젝트 중심으로 모여 동일 부서가 아니더라도 관련자들과
                   <br />
                   리얼타임으로 소통이 가능합니다.
                 </p>
-              </a>
+              </NavLink>
             </li>
             <li>
               <a href="./pages/task.html">
