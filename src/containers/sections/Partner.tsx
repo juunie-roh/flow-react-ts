@@ -1,14 +1,15 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout'
 
 const Partner = () => {
   return (
     <section className="container__partner">
-      <div className="container__inner">
+      <InnerLayout className="container__inner">
         <h2>
           대기업부터 스타트업까지 <br />
           45만 팀이 선택한 1위
         </h2>
-      </div>
+      </InnerLayout>
       <div id="partnerWrap">
         <div id="partnerLeft">
           <img src="./images/company/company-1.svg" alt="" />

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import InnerLayout from '../../layouts/InnerLayout';
 
 const formDatas = new Array<FormData>();
 
@@ -40,7 +41,7 @@ const Input = () => {
   return (
 
     <section className="container__input">
-      <div className="container__inner">
+      <InnerLayout>
         <div>
           <h2>
             간단한 정보를 기입하고
@@ -120,7 +121,7 @@ const Input = () => {
           <input type="submit" id="submitBtn" value="신청하기" onClick={ onClickSubmit } />
           {/* <button type='button' id='submitBtn' onClick={ onClickSubmit }>신청하기</button> */}
         </form>
-      </div>
+      </InnerLayout>
     </section>
 
   )

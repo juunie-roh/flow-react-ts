@@ -1,11 +1,12 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout';
 
 const Service = () => {
 
   return (
 
     <section className="container__service">
-      <div className="container__inner">
+      <InnerLayout>
         <h2>
           국내 유일! 3가지 중
           <br />
@@ -41,7 +42,7 @@ const Service = () => {
             </a>
           </div>
         </div>
-      </div>
+      </InnerLayout>
     </section>
 
   );

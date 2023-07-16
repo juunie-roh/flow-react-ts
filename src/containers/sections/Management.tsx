@@ -1,5 +1,6 @@
 import React from 'react'
 import ManagementList from '../../components/ManagementList';
+import InnerLayout from '../../layouts/InnerLayout';
 
 const managementItems = [
   {
@@ -52,13 +53,13 @@ const managementItems = [
 const Management = () => {
   return (
     <section className="container__management">
-      <div className="container__inner">
+      <InnerLayout>
         <h2>
           프로젝트 관리를 위한
           <br />
           모든 기능을 담았습니다.
         </h2>
-      </div>
+      </InnerLayout>
       <div className="flowWrap">
         <ul>
           { 

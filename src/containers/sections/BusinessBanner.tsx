@@ -1,11 +1,12 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout'
 
 const BusinessBanner = () => {
 
   return (
 
     <section className="container__businessBanner">
-      <div className="container__inner">
+      <InnerLayout>
         <div className="text">
           <div className="flow-symbols">
             <i></i>
@@ -24,7 +25,7 @@ const BusinessBanner = () => {
             <i className='bx bxs-chevron-right'></i>
           </a>
         </div>
-      </div>
+      </InnerLayout>
     </section>
 
   )

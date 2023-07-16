@@ -1,4 +1,5 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout';
 
 const MainBanner = () => {
   const styleArrowRight = { color: "#ffffff" };
@@ -6,7 +7,7 @@ const MainBanner = () => {
   return (
 
     <section className="container__mainBanner">
-      <div className="container__inner">
+      <InnerLayout>
         <div className="titleBox">
           <p>대한민국에서 가장 많이 검증된 1위</p>
           <h2>프로젝트 관리 ㅡ <br /> 협업툴 <span>플로우</span></h2>
@@ -25,7 +26,7 @@ const MainBanner = () => {
           </div>
           <div id="pj-web"></div>
         </div>
-      </div>
+      </InnerLayout>
     </section>
   )
 

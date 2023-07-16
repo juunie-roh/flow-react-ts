@@ -1,9 +1,10 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout'
 
 const Guide = () => {
   return (
     <section className="container__guide">
-      <div className="container__inner">
+      <InnerLayout>
         <h2>
           협업툴 도입 전
           <br />
@@ -69,7 +70,7 @@ const Guide = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </InnerLayout>
     </section>
   )
 }

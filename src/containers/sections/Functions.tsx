@@ -1,4 +1,5 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout';
 
 const bgUrls = [
   '../../public/images/main/main-function1.png',
@@ -59,13 +60,13 @@ const Functions = () => {
   return (
     <section className="container__functions">
 
-      <div className="container__inner">
-
+      <InnerLayout>
         <h2>
           가장 많이 쓰는
           <br />
           TOP5 기능
         </h2>
+        
         <div className="slideFunc">
           <div className="list-wrap">
             <ul id="slideList">
@@ -93,7 +94,7 @@ const Functions = () => {
         </div>
         <img src="./images/gradient-box.png" alt="" className="inline-block absolute" />
 
-      </div>
+      </InnerLayout>
 
     </section>
   )

@@ -1,9 +1,10 @@
 import React from 'react'
+import InnerLayout from '../../layouts/InnerLayout'
 
 const Example = () => {
   return (
     <section className="container__example">
-      <div className="container__inner">
+      <InnerLayout>
         <div className="image">
           <img src="./images/main/main-team.svg" alt="" />
           <img src="./images/main/main-team-mb.png" alt="" />
@@ -24,7 +25,7 @@ const Example = () => {
             고객 성공사례 보기
           </a>
         </div>
-      </div>
+      </InnerLayout>
     </section>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import './BaseLayout.css'
 
 const BaseLayout = () => {
   return (
