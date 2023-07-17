@@ -4,7 +4,7 @@ import { ProductInnerLayout } from '../layouts'
 const Project = () => {
 
   return (
-    <>
+    <main>
       <section className="container__p_banner">
         <ProductInnerLayout>
           <div className="text-wrap">
@@ -143,7 +143,7 @@ const Project = () => {
           </div>
         </div>
       </section>
-    </>
+    </main>
   )
 }
 

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { InnerLayout } from '../../layouts'
 import './Footer.css'
 
 const Footer = () => {
@@ -6,7 +8,7 @@ const Footer = () => {
 
     <footer>
 
-      <div className="container__inner">
+      <InnerLayout>
         <div className="company_info">
           <ul className="brochure">
             <li><a href="#">
@@ -78,7 +80,7 @@ const Footer = () => {
             <li>
               <ol>
                 <li><b>제품</b></li>
-                <li><a href="./pages/project.html">프로젝트 협업</a></li>
+                <li><Link to={"/project"} >프로젝트 협업</Link></li>
                 <li><a href="./pages/task.html">업무관리</a></li>
                 <li><a href="./pages/chatting.html">메신저</a></li>
                 <li><a href="./pages/okr-introduction.html">OKR</a></li>
@@ -115,7 +117,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </InnerLayout>
 
     </footer>
 
