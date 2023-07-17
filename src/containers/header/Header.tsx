@@ -19,9 +19,7 @@ const Header = () => {
       </a>
 
       <div className="container__inner">
-
         <Nav />
-
       </div>
 
     </header>

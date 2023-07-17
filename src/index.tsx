@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import './styles/reset.css';
-import './styles/main.css';
+import './styles/common.css';
 
 import App from './App';
 

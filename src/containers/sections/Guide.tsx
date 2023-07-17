@@ -1,5 +1,6 @@
 import React from 'react'
-import InnerLayout from '../../layouts/InnerLayout'
+import { InnerLayout } from '../../layouts'
+import './Guide.css'
 
 const Guide = () => {
   return (

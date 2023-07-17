@@ -6,17 +6,24 @@ import * as routes from './routes'
 import * as layout from './layouts'
 
 const App = () => {
+
   return (
+
     <BrowserRouter>
+
       <Header />
+
       <Routes>
         <Route element={<layout.BaseLayout />}>
           <Route path='/' element={<routes.Home />} />
+          <Route path='/project' element={<routes.Project />} />
         </Route>
-
       </Routes>
+
       <Footer />
+
     </BrowserRouter>
+
   )
 }
 

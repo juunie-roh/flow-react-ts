@@ -1,6 +1,7 @@
 import React from 'react'
 import ManagementList from '../../components/ManagementList';
-import InnerLayout from '../../layouts/InnerLayout';
+import { InnerLayout } from '../../layouts';
+import './Management.css'
 
 const managementItems = [
   {
@@ -64,12 +65,12 @@ const Management = () => {
         <ul>
           { 
             managementItems && managementItems.map( ( item ) => (
-              <ManagementList key={ item.id } item={ item } />
+              <ManagementList key={ `management${item.id}` } item={ item } />
             ) )
           }
           {
             managementItems && managementItems.map( ( item ) => (
-              <ManagementList key={ item.id } item={ item } />
+              <ManagementList key={ `management${item.id}` } item={ item } />
             ) )
           }
         </ul>

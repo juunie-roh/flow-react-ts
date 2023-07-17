@@ -1,0 +1,36 @@
+.container__partner {
+  padding: 100px 0;
+}
+
+#partnerWrap {
+  position: relative;
+  width: 100%; height: 220px;
+  margin-top: 60px;
+}
+
+#partnerLeft,
+#partnerRight {
+  position: absolute;
+  display: flex; flex-wrap: nowrap;
+  height: 110px;
+}
+#partnerLeft img,
+#partnerRight img { height: 100%; }
+#partnerLeft { 
+  left: 0; top: 0; 
+  animation: partnerLeft 30s linear infinite; 
+}
+#partnerRight { 
+  right: 0; top: 110px; 
+  animation: partnerRight 30s linear infinite; 
+}
+
+@keyframes partnerLeft { from { left: 0; } to { left: -100%; } }
+@keyframes partnerRight { from { right: 0; } to { right: -100%; } }
+
+@media screen and (max-width: 1024px) {
+  .container__partner { padding: 80px 0; }
+  #partnerWrap { height: 136px; }
+  #partnerLeft,
+  #partnerRight { height: 68px; }
+}

@@ -1,0 +1,12 @@
+.container__p_inner {
+  position: relative;
+  height: 100%;
+  max-width: 1304px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 640px) {
+  .container__p_inner { padding: 0 20px; }
+}
+

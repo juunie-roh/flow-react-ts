@@ -33,7 +33,7 @@ const Nav = () => {
           <span>제품<i className='bx bx-chevron-down'></i></span>
           <ul id="lnbSub">
             <li>
-              <NavLink to="./pages/project.html">
+              <NavLink to="/products">
                 <strong><img src="./images/header/gnb-project.png" alt="" />프로젝트 협업</strong>
                 <p>
                   프로젝트 중심으로 모여 동일 부서가 아니더라도 관련자들과

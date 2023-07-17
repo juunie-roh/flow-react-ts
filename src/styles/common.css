@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+:root {
+  --color333: #333;
+  --color555: #555;
+  --color777: #777;
+  --color999: #999;
+  --mainColor: #623ad6;
+  --errorColor: #f96464;
+  --ongolingColor: #00b19c;
+  --holdColor: #514474;
+  --whiteColor: #fff;
+  --fontBold: bold;
+  --fontMedium: normal;
+  --bgGray: #faf9f9;
+  --bgEee: #eee;
+}
+
+/* __COMMON__ */
+h2 {
+  font-size: 40px;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+a.activeLink {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+a.activeLink::before {
+  content: '';
+  display: block;
+  position: absolute; 
+  left: 1.5em; top: -0.5em;
+  z-index: -1;
+  width: 2.5em; height: 2.5em;
+  border-radius: 100%;
+  background-color: #d9d2ed;
+
+  transition-duration: 0.3s;
+}
+a.activeLink:hover::before {
+  transform: translateX(-0.75em) scale(0.6);
+  background-color: #02b6a0;
+}
+a.activeLink>i::before {
+  content: '';
+  display: inline-block;
+  position: relative; top: -0.1em;
+  width: 2.5em; height: 0.6em;
+  background: url(../../public/images/icon/arrow-long.svg) no-repeat center center / contain;
+}
+
+@media screen and (min-width: 1441px) {
+  h2 { font-size: 50px; }
+}
+@media screen and (max-width: 1024px) {
+  h2 { font-size: 24px; }
+  a.activeLink { font-size: 12px; }
+}
+/* __COMMON__ end */
+
+/* fixedBtns */
+#fixedBtns {
+  position: fixed; 
+  /* left: auto; right: 30px; bottom: 20px;  */
+  inset: auto 30px 20px auto;
+  z-index: 97;
+  display: block;
+}
+
+#fixedBtns>li>a {
+  position: relative;
+  display: block;
+}
+
+#fixedBtns>li:first-child>a {
+  top: 25px;
+  z-index: 98;
+  width: 75px; height: 65px;
+  overflow: hidden;
+  border-top-left-radius: 37.5px;
+  border-top-right-radius: 37.5px;
+  background: transparent;
+  box-shadow: none;
+  transition-duration: 0.3s;
+  
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.7;
+  text-align: center;
+}
+
+#fixedBtns>li:first-child>a>i {
+  display: block;
+  font-size: 24px;
+}
+
+#fixedBtns>li:first-child:hover>a {
+  background: #d9d2ed;
+  box-shadow: 13px 14px 22px rgb(0 0 0 / 30%);
+}
+
+#fixedBtns>li:last-child>a {
+  z-index: 99;
+  display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+  width: 75px; height: 75px;
+  background: var(--mainColor);
+  border-radius: 40%;
+  box-shadow: 13px 14px 22px rgb(0 0 0 / 15%);
+}
+
+#fixedBtns>li:last-child:hover>a {
+  background: var(--holdColor);
+}
+
+#fixedBtns>li:last-child>a>svg {
+  fill: #fff;
+  width: 60%; height: 60%;
+}
+
+/* fixedBtns end */

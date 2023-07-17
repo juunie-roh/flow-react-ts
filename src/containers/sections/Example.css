@@ -1,0 +1,67 @@
+.container__example {
+  width: 100%; height: auto;
+  padding: 80px 0;
+  background: #f6f4fc;
+}
+.container__example .container__inner {
+  display: block;
+}
+
+.container__example img {
+  display: block;
+  width: 600px; height: 600px;
+  margin: 0 auto;
+}
+.container__example img:last-child { display: none; }
+
+.container__example h2 { margin-bottom: 30px; }
+
+.container__example p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.container__example a {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1;
+}
+.container__example a::before {
+  content: '';
+  position: absolute; left: 1.5em; top: -0.5em;
+  display: block;
+  width: 2.5em; height: 2.5em;
+  border-radius: 100%;
+  background-color: #d9d2ed;
+  z-index: -1;
+
+  transition-duration: 0.3s;
+}
+.container__example a:hover::before {
+  transform: translateX(-0.75em) scale(0.6);
+  background-color: #02b6a0;
+}
+.container__example a>i::before {
+  content: '';
+  position: relative; top: -0.1em;
+  display: inline-block;
+  width: 2.5em; height: 0.6em;
+  background: url(../../../public/images/icon/arrow-long.svg) no-repeat center center / contain;
+}
+
+@media screen and (min-width: 1441px) {
+  .container__example .container__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+}
+
+@media screen and (max-width: 1024px) {
+  .container__example { padding: 40px 0 94px; }
+  .container__example img { width: 100%; height: auto; }
+  .container__example img:first-child { display: none; }
+  .container__example img:last-child { display: block; }
+  .container__example h2 { margin-bottom: 20px; }
+  .container__example p { font-size: 16px; }
+  .container__example p>br { display: none; }
+  .container__example a { font-size: 16px; }
+}

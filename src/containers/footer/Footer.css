@@ -1,0 +1,100 @@
+footer { background: var(--bgGray); }
+
+footer>.container__inner {
+  position: relative;
+  display: flex; justify-content: space-between;
+  padding: 50px;
+}
+
+footer .brochure {
+  display: flex; flex-wrap: wrap;
+  margin-top: -10px;
+}
+footer .brochure>li { margin: 10px 10px 10px 0; }
+footer .brochure>li>a {
+  display: block;
+  padding: 10px;
+
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 35px;
+  background: var(--bgEee);
+}
+
+footer ul.address { margin: 10px auto; }
+footer ul.address>li {
+  color: #777;
+  font-size: 13px;
+  line-height: 20px;
+}
+footer ul.address>li:first-child { margin-top: 0; }
+footer ul.address>li>p {
+  display: inline-block;
+  margin-right: 6px;
+}
+
+footer ul>li b { font-weight: 700; }
+
+footer ul.social { display: flex; justify-content: flex-start; }
+footer ul.social>li { margin-right: 10px; }
+footer ul.social a {
+  display: block;
+  width: 30px; height: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+footer ul.social a.yt { background-image: url(../../../public/images/sns/sns-yt.svg); }
+footer ul.social a.fb { background-image: url(../../../public/images/sns/sns-fb.svg); }
+footer ul.social a.ins { background-image: url(../../../public/images/sns/sns-ins.svg); }
+footer ul.social a.flw { background-image: url(../../../public/images/sns/sns-flw.svg); }
+
+footer ul.terms {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  margin-top: 30px;
+}
+footer ul.terms li {
+  margin-right: 10px;
+  color: #777;
+  font-size: 13px;
+  line-height: 20px;
+}
+footer ul.terms li.copyright { font-family: roboto; }
+
+footer ul.siteMap { display: flex; justify-content: space-between; }
+footer ul.siteMap>li {
+  margin-left: 10px;
+  min-width: 130px;
+}
+footer ul.siteMap>li ol>li {
+  margin-top: 14px;
+  color: #555;
+  font-size: 14px;
+  line-height: 21px;
+}
+footer ul.siteMap>li ol>li:hover>a {
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+footer ul.siteMap>li ol>li:first-child {
+  margin-top: 0;
+  cursor: default;
+}
+
+@media screen and (min-width: 1441px) {
+  footer>.container__inner { max-width: unset; }
+}
+
+@media screen and (max-width: 1024px) {
+  footer>.container__inner { justify-content: flex-start; padding: 20px 50px; }
+  footer ul.siteMap { display: none; }
+  footer ul.address>li>p { display: block; margin: 5px 0; }
+  footer ul.social>li { margin-right: 30px; margin-top: 15px; }
+  footer ul.terms { margin-top: 20px; }
+}
+
+@media screen and (max-width: 768px) {
+  footer>.container__inner { padding: 20px; }
+}

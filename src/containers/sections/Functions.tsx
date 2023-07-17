@@ -1,12 +1,13 @@
-import React from 'react'
-import InnerLayout from '../../layouts/InnerLayout';
+import React, { useState } from 'react'
+import { InnerLayout } from '../../layouts';
+import './Functions.css'
 
 const bgUrls = [
-  '../../public/images/main/main-function1.png',
-  '../../public/images/main/main-function2.png',
-  '../../public/images/main/main-function3.png',
-  '../../public/images/main/main-function4.png',
-  '../../public/images/main/main-function5.png'
+  'url(../../public/images/main/main-function1.png)',
+  'url(../../public/images/main/main-function2.png)',
+  'url(../../public/images/main/main-function3.png)',
+  'url(../../public/images/main/main-function4.png)',
+  'url(../../public/images/main/main-function5.png)'
 ];
 
 const Functions = () => {
@@ -17,27 +18,27 @@ const Functions = () => {
   const containerFunctions: HTMLElement | null = document.querySelector(".container__functions");
   const progressbar: HTMLElement | null = document.querySelector(".slideFunc i.progressbar");
 
-  let slideTimer = setInterval( slideTimerHandler, 5000 );
+  const [nextList, setNextList] = useState<Element | null>();
+  const [bgUrl, setBgUrl] = useState<string>(bgUrls[0]);
 
-  function slideTimerHandler() {
+  const slideTimerHandler = () => {
 
     const currentList = document.querySelector("#slideList li.active");
     progressbar?.classList.remove( 'active' );
   
-    let nextList;
     if ( currentList === slideList[ slideList.length - 1 ] ) {
-      nextList = slideList[0];
+      setNextList(slideList[0]);
     } else {
-      nextList = currentList?.nextElementSibling;
+      setNextList(currentList?.nextElementSibling);
     }
   
     currentList?.classList.remove('active');
     nextList?.classList.add('active');
   
-    if ( slideNum1?.innerText === '5' && slideNum2 !== null ) {
+    if (slideNum1?.innerText === '5' && slideNum2) {
       slideNum1.innerText = '1';
       slideNum2.innerText = ( parseInt( slideNum2.innerText ) + 1 ).toString();
-    } else if ( slideNum1?.innerText === '4' && slideNum2 !== null ) {
+    } else if ( slideNum1?.innerText === '4' && slideNum2) {
       slideNum1.innerText = ( parseInt( slideNum1.innerText ) + 1 ).toString();
       slideNum2.innerText = '1';
     } else {
@@ -47,17 +48,19 @@ const Functions = () => {
       }
     }
   
-    if ( containerFunctions && slideNum1 ) {
-      containerFunctions.style.backgroundImage = `url(${ bgUrls[ parseInt( slideNum1.innerText ) - 1 ] })`;
+    if (containerFunctions && slideNum1) {
+      setBgUrl(bgUrls[ parseInt(slideNum1.innerText) - 1 ]);
+      containerFunctions.style.backgroundImage = bgUrl;
     }
 
     progressbar?.classList.add( 'active' );
 
   }
 
-  
+  let slideTimer = setInterval( slideTimerHandler, 5000 );
 
   return (
+
     <section className="container__functions">
 
       <InnerLayout>
@@ -66,7 +69,7 @@ const Functions = () => {
           <br />
           TOP5 기능
         </h2>
-        
+
         <div className="slideFunc">
           <div className="list-wrap">
             <ul id="slideList">
@@ -92,11 +95,12 @@ const Functions = () => {
             기능 살펴보기
           </a>
         </div>
-        <img src="./images/gradient-box.png" alt="" className="inline-block absolute" />
+        <img src="./images/gradient-box.png" alt="" />
 
       </InnerLayout>
 
     </section>
+
   )
 
 }

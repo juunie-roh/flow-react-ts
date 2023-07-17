@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import InnerLayout from '../../layouts/InnerLayout';
+import { InnerLayout } from '../../layouts';
+import './Input.css'
 
 const formDatas = new Array<FormData>();
 
