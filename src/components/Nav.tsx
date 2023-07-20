@@ -1,6 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
-import * as routes from "../routes"
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
 
@@ -22,9 +21,9 @@ const Nav = () => {
 
     <nav id='lnbWrap'>
       <h1>
-        <NavLink to='/'>
-          <img src='/images/logo.svg' alt='flow logo image' />
-        </NavLink>
+        <Link to='/'>
+          <img src='./images/logo.svg' alt='flow logo' />
+        </Link>
       </h1>
 
       <ul id="lnbMenu">
@@ -33,17 +32,17 @@ const Nav = () => {
           <span>제품<i className='bx bx-chevron-down'></i></span>
           <ul id="lnbSub">
             <li>
-              <NavLink to="/project">
+              <Link to="/project">
                 <strong><img src="./images/header/gnb-project.png" alt="" />프로젝트 협업</strong>
                 <p>
                   프로젝트 중심으로 모여 동일 부서가 아니더라도 관련자들과
                   <br />
                   리얼타임으로 소통이 가능합니다.
                 </p>
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <a href="./pages/task.html">
+              <Link to="/task">
                 <strong><img src="./images/header/icon_menu_task.svg"
                     alt="" />업무관리</strong>
                 <p>
@@ -51,37 +50,37 @@ const Nav = () => {
                   <br />
                   플로우 시스템을 제공합니다.
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./pages/chatting.html">
+              <Link to="/chatting">
                 <strong><img src="./images/header/gnb-msg.png" alt="" />메신저</strong>
                 <p>
                   조직 구성원의 연락처 ∙ 이메일 ∙ 내선번호를 확인 후 보다 빠르고
                   <br />
                   정확한 업무소통을 할 수 있습니다.
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./pages/okr-introduction.html">
+              <Link to={"/okr"}>
                 <strong><img src="./images/header/icon_menu_okr.svg" alt="" />OKR</strong>
                 <p>
                   회사-팀-개인간 목표를 연결해, OKR 목표 관리와 업무를 방향성에
                   <br />
                   맞춰 몰입 할 수 있습니다.
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="./pages/video.html">
+              <Link to={"/video"}>
                 <strong><img src="./images/header/gnb-meet.png" alt="" />화상회의</strong>
                 <p>
                   플로우 사용자들이 보다 효율적으로 회의할 수 있도록 화상회의
                   <br />
                   서비스를 무료로 제공합니다.
                 </p>
-              </a>
+              </Link>
             </li>
             <li>
               <a href="./pages/security.html">

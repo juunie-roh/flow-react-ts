@@ -17,6 +17,7 @@ const App = () => {
         <Route element={<layout.BaseLayout />}>
           <Route path='/' element={<routes.Home />} />
           <Route path='/project' element={<routes.Project />} />
+          <Route path='/task' element={<routes.Task />} />
         </Route>
       </Routes>
 

@@ -1,0 +1,60 @@
+article { 
+  position: relative;
+  display: block;
+  width: 100%; height: 650px;
+  overflow: hidden;
+}
+article:nth-child(odd) { background: #fff; }
+article:nth-child(even) { background: #f5f4f9; }
+
+.contents-wrap {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  height: 100%;
+}
+article:nth-of-type(odd) .contents-wrap { flex-direction: row-reverse; }
+article:nth-of-type(even) .contents-wrap { flex-direction: row; }
+
+
+.contents-wrap .img-wrap {
+  position: relative;
+  bottom: -165px;
+  width: 100%;
+  text-align: center;
+}
+article:nth-of-type(odd) .contents-wrap .img-wrap { left: auto; right: -160px; }
+article:nth-of-type(even) .contents-wrap .img-wrap { left: -145px; right: auto; }
+.contents-wrap .img-wrap.okr { bottom: -50px; width: auto; }
+.contents-wrap .img-wrap.video,
+.contents-wrap .img-wrap.security { left: 0px; bottom: 0px; }
+.contents-wrap .img-wrap img { max-width: 100%; }
+
+
+.contents-wrap .text-wrap { width: 50%; }
+.contents-wrap .text-wrap h2.text-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  line-height: 44px;
+}
+.contents-wrap .text-wrap .text-content {
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  article { height: auto; padding: 80px 0; }
+  article:nth-of-type(odd) .contents-wrap { flex-direction: column; }
+  article:nth-of-type(even) .contents-wrap { flex-direction: column-reverse; }
+  .contents-wrap .img-wrap { position: static; margin: 0 auto; }
+  .contents-wrap .img-wrap img { height: 100%; }
+  .contents-wrap .text-wrap { width: 100%; }
+  article:nth-of-type(odd) .contents-wrap .text-wrap { margin-top: 40px; }
+  article:nth-of-type(even) .contents-wrap .text-wrap { margin-bottom: 40px; }
+  .contents-wrap .text-wrap h2.text-title { margin-top: 0px; font-size: 20px; line-height: 30px; }
+  .contents-wrap .text-wrap .text-content { width: auto; font-size: 16px; margin-top: 1em; margin-bottom: 0px; }
+}
+
+@media screen and (max-width: 900px) {
+  .contents-wrap .img-wrap img { width: 100%; height: auto; }
+}

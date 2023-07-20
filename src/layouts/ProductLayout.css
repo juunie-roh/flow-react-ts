@@ -1,0 +1,119 @@
+/* security-list */
+section.security-list { 
+  height: auto; 
+  padding: 150px 0; 
+}
+.security-list ul {
+  display: flex;
+  justify-content: space-between; align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+}
+.security-list ul li { width: 278px; }
+.security-list ul li strong {
+  display: block;
+  margin: 20px 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media screen and (max-width: 1024px) { 
+  section.security-list { padding: 80px 0; }
+  .security-list ul { display: block; margin: 0; }
+  .security-list ul li { width: 100%; margin-top: 40px; }
+  .security-list ul li i { display: block; width: 100px; height: 100px; }
+  .security-list ul li i>img { width: 100%; }
+}
+/* security-list end */
+
+
+article.certification,
+article.privacy,
+article.cloud-service {
+  height: auto;
+  padding: 150px 0;
+}
+
+.certification .contents-wrap,
+.privacy .contents-wrap,
+.cloud-service .contents-wrap { display: block; }
+.certification .text-wrap,
+.privacy .text-wrap,
+.cloud-service .text-wrap { width: 100%; }
+
+ul.card-wrap {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+ul.card-wrap li {
+  width: calc(50% - 20px);
+  padding: 60px 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #f5f4f9;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 1.6;
+}
+ul.card-wrap li h3 {
+  font-size: 20px;
+  font-weight: var(--fontBold);
+}
+ul.card-wrap li p { font-size: 15px; }
+ul.card-wrap li a {
+  display: block;
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+
+.privacy ul.card-wrap li { 
+  width: calc(33.3% - 20px); 
+  padding: 30px 30px 40px;
+  margin-top: 40px;
+  background: #fff; 
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.1);
+  text-align: left; 
+}
+.privacy ul.card-wrap li h3 { margin-top: 40px; }
+.privacy ul.card-wrap li a { margin-top: 40px; }
+
+.cloud-service .card {
+  display: flex;
+  justify-content: space-between; align-items: center;
+  width: 100%;
+  padding: 0 70px;
+  margin-top: 40px;
+  border-radius: 20px;
+  background: #f5f4f9;
+}
+
+.cloud-service .card ul { width: 100%; }
+
+.cloud-service .card ul li {
+  display: flex;
+  margin-top: 10px;
+}
+.cloud-service .card ul li .text {
+  margin-left: 10px;
+}
+
+.cloud-service .card ul li h3 {
+  font-size: 20px;
+  font-weight: var(--fontBold);
+}
+.cloud-service .card ul li p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+  article.certification,
+  article.privacy,
+  article.cloud-service { padding: 80px 0; }
+  ul.card-wrap li,
+  .privacy ul.card-wrap li { width: 100%; }
+  .cloud-service .card { flex-direction: column; padding: 40px 30px; }
+  .cloud-service .card ul li { margin: 0; }
+  .cloud-service .card ul li:last-child { margin-top: 40px; }
+}

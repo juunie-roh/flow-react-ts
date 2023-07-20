@@ -64,14 +64,14 @@ const Management = () => {
       <div className="flowWrap">
         <ul>
           { 
-            managementItems && managementItems.map( ( item ) => (
+            managementItems && managementItems.map(( item ) => (
               <ManagementList key={ `management${item.id}` } item={ item } />
-            ) )
+            ))
           }
           {
-            managementItems && managementItems.map( ( item ) => (
+            managementItems && managementItems.map(( item ) => (
               <ManagementList key={ `management${item.id}` } item={ item } />
-            ) )
+            ))
           }
         </ul>
       </div>

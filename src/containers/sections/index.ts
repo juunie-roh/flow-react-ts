@@ -7,6 +7,8 @@ import MainBanner from "./MainBanner";
 import Management from "./Management";
 import Partner from "./Partner";
 import Service from "./Service";
+import ProductMainBanner from "./ProductMainBanner";
+import ProductBusinessBanner from "./ProductBusinessBanner";
 
 export {
   BusinessBanner,
@@ -17,5 +19,7 @@ export {
   MainBanner,
   Management,
   Partner,
-  Service
+  Service,
+  ProductMainBanner,
+  ProductBusinessBanner
 }
