@@ -7,47 +7,47 @@ const managementItems = [
   {
     id: 0,
     title: "프로젝트",
-    href: "#"
+    href: "/project"
   },
   {
     id: 1,
     title: "작업관리",
-    href: "#"
+    href: "/task"
   },
   {
     id: 2,
     title: "간트차트",
-    href: "#"
+    href: "/okr" // #link-task-wbs
   },
   {
     id: 3,
     title: "OKR",
-    href: "#"
+    href: "/okr"
   },
   {
     id: 4,
     title: "메신저",
-    href: "#"
+    href: "/chatting"
   },
   {
     id: 5,
     title: "화상회의",
-    href: "#"
+    href: "/video"
   },
   {
     id: 6,
     title: "파일함",
-    href: "#"
+    href: "/project" // #link-prj-file
   },
   {
     id: 7,
     title: "캘린더",
-    href: "#"
+    href: "/project" // #link-prj-cal
   },
   {
     id: 8,
     title: "외부인 초대",
-    href: "#"
+    href: "/project" // #link-prj-invite
   }
 ];
 
