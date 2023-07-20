@@ -16,8 +16,16 @@ type ArticleProps = {
   number: number
 }
 
+type LnbSubLiProps = {
+  title: string,
+  sub_title: [string, string | null]
+  to: string,
+  src: string,
+}
+
 export type {
   ManagementItem,
   ProductMainBannerProps,
-  ArticleProps
+  ArticleProps,
+  LnbSubLiProps
 }

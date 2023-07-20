@@ -44,6 +44,7 @@ footer ul.social a {
   width: 30px; height: 30px;
   background-position: center center;
   background-repeat: no-repeat;
+  font-size: 0;
 }
 
 footer ul.social a.yt { background-image: url(../../../public/images/sns/sns-yt.svg); }

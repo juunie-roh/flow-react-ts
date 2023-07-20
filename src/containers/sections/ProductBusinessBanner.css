@@ -25,9 +25,14 @@
   font-weight: 500;
 }
 .container__p_businessBanner .text a {
+  position: relative;
   display: block;
   width: 210px; height: 52px;
+  margin-top: 0 !important;
+  padding: 0 37px;
   background: transparent;
+  border: 2px solid #fff !important;
+  border-radius: 900px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -36,7 +41,8 @@
 }
 .container__p_businessBanner .text a:hover { background: rgba(255, 255, 255, 0.15); }
 .container__p_businessBanner .text a>i {
-  top: 16px;
+  position: absolute;
+  top: 16px; right: 24px;
   color: #fff;
 }
 

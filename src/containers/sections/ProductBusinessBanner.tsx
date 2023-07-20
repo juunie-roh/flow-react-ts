@@ -25,7 +25,7 @@ const ProductBusinessBanner = () => {
               <br />
               이 모든 기능을 플로우로 체험해보세요.
             </p>
-            <a href="">
+            <a href="/">
               무료체험 시작하기
               <i className='bx bxs-chevron-right'></i>
             </a>
