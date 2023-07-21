@@ -1,9 +1,9 @@
 import React from 'react'
 import { ProductMainBanner, ProductBusinessBanner } from '../containers/sections'
-import Article from '../containers/articles/Article'
+import { ArticleProps } from '../types/props'
+import { Article } from '../containers/articles'
 
 import '../styles/common.css'
-import { ArticleProps } from '../types/props'
 
 const Project = () => {
 
@@ -49,7 +49,7 @@ const Project = () => {
       />
 
       {
-        articles.map((article) => (
+        articles.map((article: ArticleProps) => (
           <Article key={target + article.number}
                    title={article.title}
                    sub_title={article.sub_title}

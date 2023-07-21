@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductBusinessBanner, ProductMainBanner } from '../containers/sections'
-import Article from '../containers/articles/Article';
 import { ArticleProps } from '../types/props';
+import { Article } from '../containers/articles';
 
 import '../styles/common.css'
 
@@ -50,7 +50,7 @@ const Task = () => {
       />
 
       {
-        articles.map((article) => (
+        articles.map((article: ArticleProps) => (
           <Article key={target + article.number}
                    title={article.title}
                    sub_title={article.sub_title}
