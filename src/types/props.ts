@@ -23,9 +23,25 @@ type LnbSubLiProps = {
   src: string,
 }
 
+type SecurityListLiProps = {
+  target: string,
+  title: string,
+  sub_title: [string, string]
+}
+
+type CertificationCardLiProps = {
+  number: number,
+  title: string,
+  sub_title: string,
+  isLink: boolean,
+  href: string | undefined
+}
+
 export type {
   ManagementItem,
   ProductMainBannerProps,
   ArticleProps,
-  LnbSubLiProps
+  LnbSubLiProps,
+  SecurityListLiProps,
+  CertificationCardLiProps
 }
