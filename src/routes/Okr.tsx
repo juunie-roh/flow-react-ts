@@ -45,7 +45,7 @@ const Okr = () => {
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={target + article.number}
+          <Article key={`${target}${article.number}`}
                    title={article.title}
                    sub_title={article.sub_title}
                    target={article.target}
