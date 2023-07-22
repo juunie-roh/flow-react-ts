@@ -39,6 +39,7 @@ article:nth-of-type(even) .contents-wrap .img-wrap { left: -145px; right: auto; 
 .contents-wrap .text-wrap .text-content {
   width: 400px;
   margin-bottom: 40px;
+  letter-spacing: -0.5px;
 }
 
 

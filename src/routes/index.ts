@@ -5,6 +5,8 @@ import Chatting from "./Chatting";
 import Okr from "./Okr";
 import Video from "./Video";
 import Security from "./Security";
+import System from "./System";
+import Download from "./Download";
 
 export {
   Home,
@@ -13,5 +15,7 @@ export {
   Chatting,
   Okr,
   Video,
-  Security
+  Security,
+  System,
+  Download
 }

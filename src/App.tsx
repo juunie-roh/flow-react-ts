@@ -24,6 +24,8 @@ const App = () => {
           <Route path='/okr' element={<routes.Okr />} />
           <Route path='/video' element={<routes.Video />} />
           <Route path='/security' element={<routes.Security />} />
+          <Route path='/system' element={<routes.System />} />
+          <Route path='/download' element={<routes.Download />} />
         </Route>
       </Routes>
 
