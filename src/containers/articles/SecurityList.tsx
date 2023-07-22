@@ -32,10 +32,11 @@ const SecurityList = () => {
           <ul>
             { 
               SecurityListLis.map((li: SecurityListLiProps) => (
-                <SecurityListLi key={li.target}
-                                target={li.target}
-                                title={li.title}
-                                sub_title={li.sub_title}
+                <SecurityListLi 
+                  key={li.target}
+                  target={li.target}
+                  title={li.title}
+                  sub_title={li.sub_title}
                 />
               ))
             }

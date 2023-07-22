@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const CertificationCardLi = ({ number, title, sub_title, isLink, href }: CardLiProps) => {
   return (
     <li>
-      <img src={'./images/security/certificate-' + number + '.png'} alt='' />
+      <img src={`./images/security/certificate-${number}.png`} alt='' />
       <h3>{ title }</h3>
       <p>{ sub_title }</p>
       {

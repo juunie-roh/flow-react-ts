@@ -53,12 +53,13 @@ const Certification = () => {
           <ul className="card-wrap">
             {
               cards.map((card: CardLiProps) => (
-                <CertificationCardLi key={"CertificationCard-" + card.number}
-                                     number={card.number}
-                                     title={card.title}
-                                     sub_title={card.sub_title}
-                                     isLink={card.isLink}
-                                     href={card.href}
+                <CertificationCardLi 
+                  key={`CertificationCard-${card.number}`}
+                  number={card.number}
+                  title={card.title}
+                  sub_title={card.sub_title}
+                  isLink={card.isLink}
+                  href={card.href}
                 />
               ))
             }

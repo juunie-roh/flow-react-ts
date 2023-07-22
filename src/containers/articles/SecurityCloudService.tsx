@@ -43,12 +43,13 @@ const SecurityCloudService = () => {
                 <ul>
                   {
                     cards.map((card) => (
-                      <CloudServiceCardLi key={"CloudServiceCard-" + card.number}
-                                          number={card.number}
-                                          title={card.title}
-                                          sub_title={card.sub_title}
-                                          isLink={false}
-                                          href={undefined}
+                      <CloudServiceCardLi 
+                        key={`CloudServiceCard-${card.number}`}
+                        number={card.number}
+                        title={card.title}
+                        sub_title={card.sub_title}
+                        isLink={false}
+                        href={undefined}
                       />
                     ))
                   }

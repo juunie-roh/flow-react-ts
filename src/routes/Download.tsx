@@ -26,18 +26,20 @@ const Download = () => {
   return (
 
     <main>
-      <ProductMainBanner title={["다운로드", null]}
-                         sub_title={["언제 어디서든 쉽고 빠르게 플로우를 이용해 보세요.", null]}
-                         target={target}
+      <ProductMainBanner 
+        title={["다운로드", null]}
+        sub_title={["언제 어디서든 쉽고 빠르게 플로우를 이용해 보세요.", null]}
+        target={target}
       />
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={`${target}${article.number}`}
-                   title={article.title}
-                   sub_title={article.sub_title}
-                   target={article.target}
-                   number={article.number}
+          <Article 
+            key={`${target}${article.number}`}
+            title={article.title}
+            sub_title={article.sub_title}
+            target={article.target}
+            number={article.number}
           />
         ))
       }

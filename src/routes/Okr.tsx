@@ -38,18 +38,20 @@ const Okr = () => {
   return (
 
     <main>
-      <ProductMainBanner title={["OKR 목표관리와", "업무를 한번에"]}
-                         sub_title={["가장 중요한 목표와 핵심 업무에 100% 집중하세요.", null]}
-                         target={target}
+      <ProductMainBanner 
+        title={["OKR 목표관리와", "업무를 한번에"]}
+        sub_title={["가장 중요한 목표와 핵심 업무에 100% 집중하세요.", null]}
+        target={target}
       />
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={`${target}${article.number}`}
-                   title={article.title}
-                   sub_title={article.sub_title}
-                   target={article.target}
-                   number={article.number}
+          <Article 
+            key={`${target}${article.number}`}
+            title={article.title}
+            sub_title={article.sub_title}
+            target={article.target}
+            number={article.number}
           />
         ))
       }

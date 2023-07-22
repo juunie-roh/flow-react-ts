@@ -38,18 +38,20 @@ const System = () => {
   return (
 
     <main>
-      <ProductMainBanner title={["편의성을 한층 높인", "사내 시스템 연동"]}
-                         sub_title={["구글・드롭박스 등 세계 최고 소프트웨어는 물론", "우리회사의 그룹웨어・ERP 등 사내 시스템과도 연동할 수 있습니다."]}
-                         target={target}
+      <ProductMainBanner 
+        title={["편의성을 한층 높인", "사내 시스템 연동"]}
+        sub_title={["구글・드롭박스 등 세계 최고 소프트웨어는 물론", "우리회사의 그룹웨어・ERP 등 사내 시스템과도 연동할 수 있습니다."]}
+        target={target}
       />
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={`${target}${article.number}`}
-                   title={article.title}
-                   sub_title={article.sub_title}
-                   target={article.target}
-                   number={article.number}
+          <Article 
+            key={`${target}${article.number}`}
+            title={article.title}
+            sub_title={article.sub_title}
+            target={article.target}
+            number={article.number}
           />
         ))
       }

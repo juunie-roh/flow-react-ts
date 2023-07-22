@@ -49,12 +49,13 @@ const SecurityPrivacy = () => {
           <ul className="card-wrap">
             {
               cards.map((card) => (
-                <PrivacyCardLi key={"privacy_card-" + card.number}
-                               number={card.number}
-                               title={card.title}
-                               sub_title={card.sub_title}
-                               isLink={card.isLink}
-                               href={card.href}
+                <PrivacyCardLi 
+                  key={`privacy_card-${card.number}`}
+                  number={card.number}
+                  title={card.title}
+                  sub_title={card.sub_title}
+                  isLink={card.isLink}
+                  href={card.href}
                 />
               ))
             }

@@ -43,18 +43,20 @@ const Project = () => {
 
   return (
     <main>
-      <ProductMainBanner title={["프로젝트 협업", "올인원 관리"]}
-                         sub_title={["프로젝트 중심으로 모여 동일 부서가 아니더라도 관련자들과", "리얼타임으로 소통이 가능합니다."]}
-                         target={target}
+      <ProductMainBanner 
+        title={["프로젝트 협업", "올인원 관리"]}
+        sub_title={["프로젝트 중심으로 모여 동일 부서가 아니더라도 관련자들과", "리얼타임으로 소통이 가능합니다."]}
+        target={target}
       />
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={`${target}${article.number}`}
-                   title={article.title}
-                   sub_title={article.sub_title}
-                   target={article.target}
-                   number={article.number}
+          <Article 
+            key={`${target}${article.number}`}
+            title={article.title}
+            sub_title={article.sub_title}
+            target={article.target}
+            number={article.number}
           />
         ))
       }

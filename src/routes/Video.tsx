@@ -32,18 +32,20 @@ const Video = () => {
   return (
 
     <main>
-      <ProductMainBanner title={["플로우에서", "화상회의 참여하기"]}
-                         sub_title={["플로우 사용자들이 보다 효율적으로 회의할 수 있도록 화상회의 서비스를 지원합니다.", null]}
-                         target={target}
+      <ProductMainBanner 
+        title={["플로우에서", "화상회의 참여하기"]}
+        sub_title={["플로우 사용자들이 보다 효율적으로 회의할 수 있도록 화상회의 서비스를 지원합니다.", null]}
+        target={target}
       />
 
       {
         articles.map((article: ArticleProps) => (
-          <Article key={`${target}${article.number}`}
-                   title={article.title}
-                   sub_title={article.sub_title}
-                   target={article.target}
-                   number={article.number}
+          <Article 
+            key={`${target}${article.number}`}
+            title={article.title}
+            sub_title={article.sub_title}
+            target={article.target}
+            number={article.number}
           />
         ))
       }

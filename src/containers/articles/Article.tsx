@@ -14,7 +14,7 @@ const Article = (props: ArticleProps) => {
         <div className='contents-wrap'>
 
           <div className='img-wrap'>
-            <img src={'./images/' + props.target + '/content-' + props.number as string + '.png'} alt=''/>
+            <img src={`./images/${props.target}/content-${props.number}.png`} alt=''/>
           </div>
           <div className='text-wrap'>
             <h2 className='text-title'>

@@ -93,11 +93,12 @@ const Nav = () => {
           <ul id="lnbSub">
             {
               productLnbSubLis.map(item => (
-                <ProductLnbSubLi key={item.to} 
-                          to={item.to}
-                          src={item.src}
-                          title={item.title}
-                          sub_title={item.sub_title}
+                <ProductLnbSubLi 
+                  key={item.to} 
+                  to={item.to}
+                  src={item.src}
+                  title={item.title}
+                  sub_title={item.sub_title}
                 />
               ))
             }
