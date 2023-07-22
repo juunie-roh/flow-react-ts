@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProductInnerLayout } from '../../layouts'
-import { CertificationCardLiProps } from '../../types/props'
+import { CardLiProps } from '../../types/props'
 import CertificationCardLi from '../../components/CertificationCardLi'
 
 import './Article.css'
@@ -8,7 +8,7 @@ import './Certification.css'
 
 const Certification = () => {
 
-  const cards: Array<CertificationCardLiProps> = [
+  const cards: Array<CardLiProps> = [
     {
       number: 1,
       title: "ISO/IEC 27001 : 2013",
@@ -52,7 +52,7 @@ const Certification = () => {
 
           <ul className="card-wrap">
             {
-              cards.map((card: CertificationCardLiProps) => (
+              cards.map((card: CardLiProps) => (
                 <CertificationCardLi key={"CertificationCard-" + card.number}
                                      number={card.number}
                                      title={card.title}

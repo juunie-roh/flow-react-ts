@@ -29,7 +29,7 @@ type SecurityListLiProps = {
   sub_title: [string, string]
 }
 
-type CertificationCardLiProps = {
+type CardLiProps = {
   number: number,
   title: string,
   sub_title: string,
@@ -43,5 +43,5 @@ export type {
   ArticleProps,
   LnbSubLiProps,
   SecurityListLiProps,
-  CertificationCardLiProps
+  CardLiProps
 }

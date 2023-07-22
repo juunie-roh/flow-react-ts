@@ -1,8 +1,8 @@
 import React from 'react'
-import { CertificationCardLiProps } from '../types/props'
+import { CardLiProps } from '../types/props'
 import { Link } from 'react-router-dom'
 
-const CertificationCardLi = ({ number, title, sub_title, isLink, href }: CertificationCardLiProps) => {
+const CertificationCardLi = ({ number, title, sub_title, isLink, href }: CardLiProps) => {
   return (
     <li>
       <img src={'./images/security/certificate-' + number + '.png'} alt='' />
