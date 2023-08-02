@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import ProductLnbSubLi from './ProductLnbSubLi';
 import { LnbSubLiProps } from '../types/props';
+import { useAuthState } from '../contexts/AuthContextProvider';
 
 const productLnbSubLis: Array<LnbSubLiProps> = [
   {
@@ -62,6 +63,8 @@ const productLnbSubLis: Array<LnbSubLiProps> = [
 ];
 
 const Nav = () => {
+
+  const { isLoggedIn, userName } = useAuthState();
 
   const onSideMenuClick = () => {
 

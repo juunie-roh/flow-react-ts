@@ -4,6 +4,7 @@ import { UserState, UserAction } from '../types/user';
 type UserDispatch = Dispatch<UserAction>;
 
 const AuthStateContext = createContext<UserState>({
+  isLoggedIn: false,
   userName: "",
   userId: "",
   userInfo: "",
@@ -15,6 +16,11 @@ const reducer = (state: UserState, action: UserAction): UserState => {
 
   switch (action.type) {
 
+    case 'TOGGLE_LOGIN':
+      return {
+        ...state,
+        isLoggedIn: action.isLoggedIn
+      }
     case 'SET_NAME':
       return {
         ...state,
@@ -44,16 +50,17 @@ const reducer = (state: UserState, action: UserAction): UserState => {
 const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
 
   const [state, dispatch] = useReducer(reducer, {
-    userName: "name",
-    userId: "id",
-    userInfo: "information",
-    authorization: "authorization"
+    isLoggedIn: false,
+    userName: "",
+    userId: "",
+    userInfo: "",
+    authorization: ""
   });
 
   return (
     <AuthStateContext.Provider value={state}>
       <AuthDispatchContext.Provider value={dispatch}>
-        {children}
+        { children }
       </AuthDispatchContext.Provider>
     </AuthStateContext.Provider>
   )
