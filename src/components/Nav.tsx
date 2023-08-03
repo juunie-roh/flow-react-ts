@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import ProductLnbSubLi from './ProductLnbSubLi';
 import { LnbSubLiProps } from '../types/props';
@@ -62,29 +62,32 @@ const productLnbSubLis: Array<LnbSubLiProps> = [
   }
 ];
 
-const Nav = () => {
+const Nav = ({ isHeaderOn, setIsHeaderOn }: { isHeaderOn: boolean, setIsHeaderOn: Function }) => {
 
   const { isLoggedIn, userName } = useAuthState();
+  const [isSideMenuActive, setIsSideMenuActive] = useState<boolean>(false);
+  const [isLnbMenuOn, setIsLnbMenuOn] = useState<boolean>(false);
+
   const authDispatch = useAuthDispatch();
 
-  const onLoginClick = (e: any) => {
-    e.preventDefault();
+  const onLoginClick = (e: React.MouseEvent) => {
 
+    e.preventDefault();
     authDispatch({ type: 'TOGGLE_LOGIN', isLoggedIn: !isLoggedIn });
+    
   }
 
   const onSideMenuClick = () => {
 
-    document.getElementById( 'sideMenu' )?.classList.toggle( 'active' );
-    document.getElementById('lnbMenu')?.classList.toggle( 'on' );
-    document.querySelector('header')?.classList.toggle( 'on' );
+    setIsSideMenuActive(!isSideMenuActive);
+    setIsLnbMenuOn(!isLnbMenuOn);
+    setIsHeaderOn(!isHeaderOn);
 
   }
 
   const onLnbMenuClick = ( id:string ) => {
 
     document.getElementById( id )?.classList.toggle( 'active' );
-    document.querySelector('header')?.classList.toggle( 'on' );
 
   }
 
@@ -97,14 +100,14 @@ const Nav = () => {
         </Link>
       </h1>
 
-      <ul id="lnbMenu">
+      <ul id="lnbMenu" className={isLnbMenuOn ? "on" : ""}>
 
         <li id='product' onClick={ () => onLnbMenuClick( 'product' ) }>
           <span>제품<i className='bx bx-chevron-down'></i></span>
           <ul id="lnbSub">
             {
               productLnbSubLis.map(item => (
-                <ProductLnbSubLi 
+                <ProductLnbSubLi
                   key={item.to} 
                   to={item.to}
                   src={item.src}
@@ -180,7 +183,7 @@ const Nav = () => {
 
       <ul id="lnbSide">
         <li><button onClick={onLoginClick}>{isLoggedIn ? userName: "무료시작"}</button></li>
-        <li><div id="sideMenu" onClick={onSideMenuClick}>
+        <li><div id="sideMenu" className={ isSideMenuActive ? "active" : "" } onClick={onSideMenuClick}>
           <div className="center">
             <div className="bar bar01"></div>
             <div className="bar bar02"></div>

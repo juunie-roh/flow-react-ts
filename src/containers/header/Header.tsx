@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from '../../components/Nav'
 import './Header.css'
 
 const Header = () => {
+
+  const [isHeaderOn, setIsHeaderOn] = useState<boolean>(false);
   
   return (
 
-    <header>
+    <header className={ isHeaderOn ? "on" : "" }>
 
       <a href='/' className='thin'>
         <div className="thin_content">
@@ -19,7 +21,7 @@ const Header = () => {
       </a>
 
       <div className="container__inner">
-        <Nav />
+        <Nav isHeaderOn={isHeaderOn} setIsHeaderOn={setIsHeaderOn}/>
       </div>
 
     </header>
