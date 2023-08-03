@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import ProductLnbSubLi from './ProductLnbSubLi';
 import { LnbSubLiProps } from '../types/props';
-import { useAuthState } from '../contexts/AuthContextProvider';
+import { useAuthDispatch, useAuthState } from '../contexts/AuthContextProvider';
 
 const productLnbSubLis: Array<LnbSubLiProps> = [
   {
@@ -65,6 +65,13 @@ const productLnbSubLis: Array<LnbSubLiProps> = [
 const Nav = () => {
 
   const { isLoggedIn, userName } = useAuthState();
+  const authDispatch = useAuthDispatch();
+
+  const onLoginClick = (e: any) => {
+    e.preventDefault();
+
+    authDispatch({ type: 'TOGGLE_LOGIN', isLoggedIn: !isLoggedIn });
+  }
 
   const onSideMenuClick = () => {
 
@@ -77,6 +84,7 @@ const Nav = () => {
   const onLnbMenuClick = ( id:string ) => {
 
     document.getElementById( id )?.classList.toggle( 'active' );
+    document.querySelector('header')?.classList.toggle( 'on' );
 
   }
 
@@ -153,12 +161,25 @@ const Nav = () => {
       </ul>
 
       <ul id="lnbLogin">
-        <li><a href="/">로그인</a></li>
-        <li><button>무료 회원가입</button></li>
+        {
+          isLoggedIn ?
+          (
+            <>
+              <li><a href='/' onClick={onLoginClick}>로그아웃</a></li>
+              <li><button onClick={onLoginClick}>{ userName }</button></li>
+            </>
+          ):
+          (
+            <>
+              <li><a href="/" onClick={onLoginClick}>로그인</a></li>
+              <li><button onClick={onLoginClick}>무료 회원가입</button></li>
+            </>
+          )
+        }
       </ul>
 
       <ul id="lnbSide">
-        <li><button>무료시작</button></li>
+        <li><button onClick={onLoginClick}>{isLoggedIn ? userName: "무료시작"}</button></li>
         <li><div id="sideMenu" onClick={onSideMenuClick}>
           <div className="center">
             <div className="bar bar01"></div>

@@ -8,7 +8,7 @@ const Header = () => {
 
     <header>
 
-      <a href='#' className='thin'>
+      <a href='/' className='thin'>
         <div className="thin_content">
           <div className="img"></div>
           <p>🎁 8주년 신규고객 이벤트!</p>

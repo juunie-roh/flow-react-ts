@@ -51,7 +51,7 @@ const AuthContextProvider = ({ children }: { children: React.ReactNode }) => {
 
   const [state, dispatch] = useReducer(reducer, {
     isLoggedIn: false,
-    userName: "",
+    userName: "테스트 유저명",
     userId: "",
     userInfo: "",
     authorization: ""
