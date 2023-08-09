@@ -11,7 +11,7 @@ const ProductBusinessBanner = () => {
         <ProductInnerLayout>
 
           <div className="text">
-            <div className="flow-symbols">
+            <div className="flow-symbols product">
               <i/>
               <i/>
               <i/>

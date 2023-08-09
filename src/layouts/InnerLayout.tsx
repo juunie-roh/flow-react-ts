@@ -1,5 +1,4 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 import './InnerLayout.css'
 
 const InnerLayout = ({ children }: any) => {

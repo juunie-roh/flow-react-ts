@@ -74,12 +74,12 @@
   font-size: 14px;
   font-weight: 900;
 }
-.slideFunc i.progressbar {
+.slideFunc i#progressbar {
   position: relative;
   width: 80%; height: 1px;
   background: #ddd;
 }
-.slideFunc i.progressbar.active::after {
+.slideFunc i#progressbar.active::after {
   content: '';
   position: absolute;
   left: 0; top: 0;

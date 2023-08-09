@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
+import shortid from "shortid";
 import { InnerLayout } from '../../layouts';
 import './Functions.css'
 
-const slideLis = document.querySelectorAll( '#slideList li' );
 const currentNum = document.getElementById("currentNum");
 const nextNum = document.getElementById("nextNum");
 const container: HTMLElement | null = document.querySelector(".container__functions");
-const progressbar: HTMLElement | null = document.querySelector(".slideFunc i.progressbar");
 
 const SLIDER_DELAY = 5000;
 
@@ -19,16 +18,20 @@ const bgUrls = [
 ];
 const Functions = () => {
 
-  const [currentLi, setCurrentLi] = useState<Element>(slideLis[0]);
+  const slideLis = document.querySelectorAll('#slideList li');
+
+  const [currentLi, setCurrentLi] = useState<Element>();
+  const [activeBar, setActiveBar] = useState<boolean>(true);
   let sliderInterval;
   
   const activateLi = (li: Element) => {
     
     const currentIndex = Array.prototype.indexOf.call(slideLis, li);
+    console.log(currentIndex);
     currentNum && ( currentNum.innerHTML = (currentIndex + 1).toString() );
     nextNum && ( nextNum.innerHTML = (currentIndex === slideLis.length - 1) ? "1" : (currentIndex + 2).toString() );
     li.classList.add('active');
-    progressbar?.classList.add('active');
+    setActiveBar(true);
     setCurrentLi(li);
 
   }
@@ -37,13 +40,20 @@ const Functions = () => {
     
     e.preventDefault();
     currentLi?.classList.remove('active');
-    progressbar?.classList.remove("active");
-    void progressbar?.offsetWidth; // this is for replaying the animation of progressbar
+    setActiveBar(false);
+    console.log(e.currentTarget);
     activateLi(e.currentTarget);
 
   }
 
-  
+  /**
+   * Generates new key used for replaying animation in div.slideProgress.
+   * @returns random short id from "shortid" package.
+   */
+  const getShortId = () => {
+    const id = shortid.generate();
+    return id;
+  }
 
   return (
 
@@ -59,7 +69,7 @@ const Functions = () => {
         <div className="slideFunc">
           <div className="list-wrap">
             <ul id="slideList">
-              <li className="active" onClick={onClickLi}>프로젝트</li>
+              <li onClick={onClickLi} className='active'>프로젝트</li>
               <li onClick={onClickLi}>업무관리</li>
               <li onClick={onClickLi}>간트차트</li>
               <li onClick={onClickLi}>보안메신저</li>
@@ -71,9 +81,9 @@ const Functions = () => {
             <br />
             온라인 협업 방식으로 프로젝트 소통을 강화할 수 있습니다.
           </p>
-          <div className="slideProgress">
+          <div className="slideProgress" key={getShortId()}>
             <p id="currentNum">1</p>
-            <i className="progressbar active"></i>
+            <i id="progressbar" className={ activeBar ? "active" : "" }></i>
             <p id="nextNum">2</p>
           </div>
           <a href="#" className="activeLink">
